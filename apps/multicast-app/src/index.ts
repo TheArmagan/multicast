@@ -12,6 +12,7 @@ const createWindow = () => {
     frame: false,
     transparent: true,
     backgroundColor: "#00000000",
+    backgroundMaterial: "acrylic",
     resizable: true,
     autoHideMenuBar: true,
     center: true,

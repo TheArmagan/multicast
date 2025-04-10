@@ -1,9 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html class="dark" lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<style>
+			html, body {
+				background: none !important;
+				border-radius: 16px !important;
+			}
+
+			body {
+				background-color: rgba(0, 0, 0, 0.5) !important;
+			}
+		</style>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
