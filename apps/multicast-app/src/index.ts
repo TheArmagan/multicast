@@ -1,5 +1,9 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
+import cp from 'child_process';
+import path from 'path';
+import fs from 'fs';
 import isDev from 'electron-is-dev';
+import JSONStream from 'json-stream';
 
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = 'true';
 
@@ -50,4 +54,14 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit()
   }
-})
+});
+
+(() => {
+  const keyListenerProc = cp.spawn(path.resolve(__dirname, "./key-listener.exe"), ["COMPLEX"]);
+  const jsonStream = JSONStream();
+  keyListenerProc.stdout.pipe(jsonStream);
+  
+  jsonStream.on('data', (data) => {
+    console.log("KeyListener Data: ", data);
+  });
+})();

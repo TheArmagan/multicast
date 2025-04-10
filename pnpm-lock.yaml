@@ -19,10 +19,16 @@ importers:
       esbuild:
         specifier: ^0.25.2
         version: 0.25.2
+      json-stream:
+        specifier: ^1.0.0
+        version: 1.0.0
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
     devDependencies:
+      '@types/json-stream':
+        specifier: ^1.0.3
+        version: 1.0.3
       '@types/node':
         specifier: ^22.14.0
         version: 22.14.0
@@ -540,6 +546,9 @@ packages:
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
+
+  '@types/json-stream@1.0.3':
+    resolution: {integrity: sha512-THoLTuQZSiQO0PSqfnFKSVm5idLmtN06pmj/MC0laZwg8WSMLzYYB4PpT17pO51XTO+imRprzcAvUPMgeVGEoA==}
 
   '@types/keyv@3.1.4':
     resolution: {integrity: sha512-BQ5aZNSCpj7D6K2ksrRCTmKRLEpnPvWDiLPfoGyhZ++8YtiK9d/3DBKPJgry359X/P1PfruyYwvnvwFjuEiEIg==}
@@ -1132,6 +1141,9 @@ packages:
 
   json-stable-stringify-without-jsonify@1.0.1:
     resolution: {integrity: sha512-Bdboy+l7tA3OGW6FjyFHWkP5LuByj1Tk33Ljyq0axyzdk9//JSi2u3fP1QSmd1KNwq6VOKYGlAu87CisVir6Pw==}
+
+  json-stream@1.0.0:
+    resolution: {integrity: sha512-H/ZGY0nIAg3QcOwE1QN/rK/Fa7gJn7Ii5obwp6zyPO4xiPNwpIMjqy2gwjBEGqzkF/vSWEIBQCBuN19hYiL6Qg==}
 
   json-stringify-safe@5.0.1:
     resolution: {integrity: sha512-ZClg6AaYvamvYEE82d3Iyd3vSSIjQ+odgjaTzRuO3s7toCdFKczob2i0zCh7JE8kWn17yvAWhUVxvqGwUalsRA==}
@@ -2257,6 +2269,10 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
+  '@types/json-stream@1.0.3':
+    dependencies:
+      '@types/node': 22.14.0
+
   '@types/keyv@3.1.4':
     dependencies:
       '@types/node': 22.14.0
@@ -2921,6 +2937,8 @@ snapshots:
   json-schema-traverse@0.4.1: {}
 
   json-stable-stringify-without-jsonify@1.0.1: {}
+
+  json-stream@1.0.0: {}
 
   json-stringify-safe@5.0.1:
     optional: true
