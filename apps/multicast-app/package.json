@@ -1,0 +1,23 @@
+{
+  "name": "@multicast/app",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node build.js",
+    "start": "electron dist/multicast.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.7.1",
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "electron": "^35.1.5"
+  },
+  "dependencies": {
+    "electron-is-dev": "^3.0.1",
+    "esbuild": "^0.25.2",
+    "typescript": "^5.8.3"
+  }
+}
